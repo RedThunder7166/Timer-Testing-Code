@@ -21,7 +21,7 @@ public class TEST_TEST_TEST extends SequentialCommandGroup {
   public TEST_TEST_TEST(ExampleSubsystem motor) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super(new ExampleCommand(motor, 0.01).withTimeout(5)
+    super(new ExampleCommand(motor, 0.01).withTimeout(5).andThen(new ExampleCommand(motor, 0.0))
     );
     
   }
